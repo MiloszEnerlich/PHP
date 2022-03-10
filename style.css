@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg,#035c04,#08c414);
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(120deg,#035c04,#08c414);
+}
+.container form .podatek{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .podatek .input-box{
+    margin-bottom: 5px;
+    width: calc(100%/2);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.podatek .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.podatek .input-box input:focus,
+.podatek .input-box input:focus{
+    border-color: #08c414;
+}
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(120deg,#035c04,#08c414);
+}
+form .button input:hover{
+    background: linear-gradient(-120deg,#035c04,#08c414);
+}
+@media(max-width: 584px){
+    .container{
+        max-width: 100%;
+}
+form .podatek .input-box{
+    margin-bottom: 5px;
+    width: calc(100%/2);
+}
+.container form .podatek{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.podatek::-webkit-scrollbar{
+    width: 0;
+}
+}
